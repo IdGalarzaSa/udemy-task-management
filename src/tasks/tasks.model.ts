@@ -1,4 +1,4 @@
-export interface TaskModel {
+export class TaskModel {
     id: String;
     title: String;
     description: String;
