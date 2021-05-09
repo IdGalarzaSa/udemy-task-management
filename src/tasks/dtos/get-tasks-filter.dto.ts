@@ -1,6 +1,6 @@
 import { Optional } from '@nestjs/common';
 import { IsIn, IsNotEmpty } from 'class-validator';
-import { TaskStatus } from '../tasks.model';
+import { TaskStatus } from '../task.entity';
 export class GetTasksFilterDTO {
  
     @Optional()

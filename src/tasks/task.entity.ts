@@ -1,8 +1,7 @@
 import { title } from "node:process";
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import { TaskStatus } from './tasks.model';
 
-@Entity()
+@Entity("Tasks")
 export class TaskEntity extends BaseEntity {
 
     // Define la comluman del key
@@ -19,4 +18,11 @@ export class TaskEntity extends BaseEntity {
     @Column()
     // Podemos definir como tipo de columna a un enum
     status: TaskStatus; 
+}
+
+
+export enum TaskStatus {
+    OPEN = "OPEN",
+    IN_PROGRESS = "IN_PROGRESS",
+    CLOSE = "CLOSE",
 }
